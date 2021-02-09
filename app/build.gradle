@@ -1,7 +1,8 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-}
+apply plugin: 'com.android.application'
+apply plugin: 'org.sonarqube'
+apply plugin: 'com.hiya.jacoco-android'
+apply plugin: 'kotlin-android'
+apply from: '../sonarqube.gradle'
 
 android {
     compileSdkVersion 30
@@ -30,6 +31,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
